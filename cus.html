@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="cus.js"></script>
+</head>
+
+<body>
+    <div class="flex justify-between">
+        <input type="text" id="dateInput" name="birthday">
+        <input type="text" id="dateI" name="birthday">
+    </div>
+    <script>
+        $(document).ready(function () {
+            let picker = createCalendarPicker($("#dateInput"));
+            $("#dateInput").on("change", function () {
+                console.log("Birthday:", picker.getDate());
+            });
+
+            let datey = createCalendarPicker($("#dateI"));
+            $("#dateI").on("change", function () {
+                console.log("Birth I:", datey.getDate());
+            });
+        });
+    </script>
+</body>
+
+</html>
